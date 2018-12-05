@@ -7,7 +7,7 @@ public class SetterInjectedController {
     private GreetingService greetingService;
 
     public String sayHello() {
-        return greetingService.sayGreeting();
+        return this.getClass().getSimpleName() + " " + greetingService.sayGreeting();
     }
 
     public GreetingService getGreetingService() {

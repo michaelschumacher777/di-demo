@@ -8,7 +8,7 @@ public class PropertyInjectedController {
     public GreetingServiceImpl greetingService;
 
     public String sayHello() {
-        return greetingService.sayGreeting();
+        return this.getClass().getSimpleName() + " " + greetingService.sayGreeting();
     }
 
 }
